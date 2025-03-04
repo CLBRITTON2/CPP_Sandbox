@@ -16,7 +16,7 @@
 // All pointers should be initialized before use
 
 int main() {
-    // Since we don't initalize intPointer to point to nothing.. Printing intPointer produces unexpected output
+    // Since we don't initalize intPointer to point to nothing.. Printing the value at memory address intPointer produces unexpected output
     int *intPointer;
     std::cout << "The value of uninitialized intPointer is: " << intPointer << std::endl; 
     std::cout << "The memory address of uninitialized intPointer is: " << &intPointer << std::endl;
@@ -43,7 +43,7 @@ int main() {
     // In order to access the data we're pointing to we have to dereference the pointer using the dereference operator *
     std::cout << "When we derefernce intPointer using *intPointer we get: " << *intPointer << std::endl;
     std::cout << std::endl;
-
+    
     // These same concepts can be applied to pointers of different types
     std::string string = "This is a string";
     std::string *stringPointer = nullptr;
