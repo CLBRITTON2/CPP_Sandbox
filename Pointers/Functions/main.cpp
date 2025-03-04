@@ -13,12 +13,12 @@ int MultiplyTwoValues(int *firstIntPointer, int *secondIntPointer){
 }
 
 void SwapTwoValues(double *firstDoublePointer, double *secondDoublePointer){
-    // Create a pointer place holder to store the initial value of *firstDoublePointer
+    // Create a place holder to store the initial value of *firstDoublePointer
     // If we set the value of *firstDoublePointer to point to *secondDoublePointer without a place holder we can't point secondDoublePointer back to first
     // We'd be pointing the second double pointer back to itself
-    double *placeHolder = firstDoublePointer;
+    double placeHolder = *firstDoublePointer;
     *firstDoublePointer = *secondDoublePointer;
-    *secondDoublePointer = *placeHolder;
+    *secondDoublePointer = placeHolder;
 }
 
 int* AddTwoValues(int *firstIntPointer, int *secondIntPointer){
